@@ -54,19 +54,19 @@
  * Offset from endpoints to get nozzle to 0,0 (front/left of bed)
  * (How to center prints: https://github.com/JimBrown/MarlinTarantula/wiki/How-to-center-your-prints-(EasyConfig))
  */
-#define NOZZLE_X          0
-#define NOZZLE_Y          0
+#define NOZZLE_X          10
+#define NOZZLE_Y          20
 
 /**
  * Minimal Z height (in mm) before homing (G28) for Z clearance above the bed, clamps, ...
  */
-#define Z_HOMING_HEIGHT 5
+#define Z_HOMING_HEIGHT 20
 
 /**
  * Primary Extruder steps per mm (plugged in to E0 port on controller)
  * (How to calibrate: https://toms3d.org/2014/04/06/3d-printing-guides-calibrating-your-extruder/)
  */
-#define E0_STEPS      400 // Stock extruder. If you have a Tevo Titan, try 400 then calibrate.
+#define E0_STEPS      426.37 // Stock extruder. If you have a Tevo Titan, try 400 then calibrate.
 #define CHANGE_E0_DIRECTION   // If your extruder is going backwards, enable this.
 
 /**
@@ -79,7 +79,7 @@
  * Z-Probe type (must be none or one of them)
  * If a Z-Probe type is selected, a Bed Leveling type other than MANUAL must be selected.
  */
-//#define BLTOUCH         // ANTClabs BLTouch sensor (might also work with clones)
+#define BLTOUCH         // ANTClabs BLTouch sensor (might also work with clones)
 //#define SN04          // Green sensor
 //#define INDUCTIVE_NO  // Normally open inductive sensor
 //#define INDUCTIVE_NC  // Normally closed inductive sensor
@@ -92,24 +92,24 @@
 //#define TRIPOINT
 //#define LINEAR
 //#define BILINEAR
-//#define UBL
-#define MANUAL
+#define UBL
+//#define MANUAL
 
 /**
  * Z-Probe offset from nozzle (https://github.com/JimBrown/MarlinTarantula/wiki/How-to-determine-your-Z-Probe-offset)
  * Use only one of Left/Right and Front/Behind. Others must be 0 (zero)
  * If you have a dual nozzle the offsets are calculated from the primary nozzle (the one plugged in to E0)
  */
-#define SENSOR_LEFT        0
+#define SENSOR_LEFT        17
 #define SENSOR_RIGHT       0
-#define SENSOR_FRONT       0
+#define SENSOR_FRONT       37
 #define SENSOR_BEHIND      0
 
 /**
  * Number of grid points in each direction
  * Minimum 3. Maximum 15 for UBL. Maximum 7 for MANUAL
  */
-#define GRID_POINTS        3
+#define GRID_POINTS        9
 
 /**
  * Margin around perimiter of bed for probing (will not probe outside this margin)
@@ -184,7 +184,7 @@
  *       PLA and ABS will appear under both Custom Command and Prepare.
  */
 #define Hot_PLA 		200
-#define Bed_PLA 		 65
+#define Bed_PLA 		 45
 
 #define Hot_ABS 		240
 #define Bed_ABS 		100
